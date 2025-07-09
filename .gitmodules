@@ -1,0 +1,4 @@
+[submodule "src/main/DertLib"]
+	path = src/main/DertLib
+	url = https://github.com/DertResources/DertLib.git
+	branch = main
