@@ -2,6 +2,9 @@
 
 Robot::Robot() {}
 void Robot::RobotPeriodic() {
+  PreStep();
+  //step();
+  PostStep();
 }
 
 void Robot::AutonomousInit() {}
