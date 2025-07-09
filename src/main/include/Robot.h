@@ -26,10 +26,12 @@ class Robot : public frc::TimedRobot {
   void TestPeriodic() {};
   void SimulationPeriodic() {};
 
+  /** Takes inputs from sensors and pushes their data to simulink */
   void PreStep() {for(auto component : dlib::Component::AllCreatedComponents) component->PreStepCallback();}
   
   /** Takes outputs from simulink and pushes their commands to hardware */
   void PostStep() {for(auto component : dlib::Component::AllCreatedComponents) component->PostStepCallback();}
 
+  // All Components
   ChooserComponent m_ChooserComponent;
 };
