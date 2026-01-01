@@ -1,6 +1,14 @@
 #include "include/Robot.h"
 
-Robot::Robot() {}
+Robot::Robot() {
+  frc::sim::DriverStationSim::SetEnabled(true);
+  frc::sim::DriverStationSim::NotifyNewData();
+
+  // pause to start robot
+  std::this_thread::sleep_for(std::chrono::milliseconds{100});
+}
+
+
 void Robot::RobotPeriodic() {
   PreStep();
   //step();

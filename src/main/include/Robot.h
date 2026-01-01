@@ -2,7 +2,13 @@
 
 #include <frc/TimedRobot.h>
 #include "DertLib/include/Component.h"
-#include "include/ChooserComponent.h"
+#include "include/ChooserTest.h"
+
+
+#include <frc/simulation/DriverStationSim.h>
+
+
+
 
 class Robot : public frc::TimedRobot {
  public:
@@ -27,11 +33,11 @@ class Robot : public frc::TimedRobot {
   void SimulationPeriodic() {};
 
   /** Takes inputs from sensors and pushes their data to simulink */
-  void PreStep() {for(auto component : dlib::Component::AllCreatedComponents) component->PreStepCallback();}
+  void PreStep() {for(auto component : dlib::Component::allCreatedComponents) component->PreStepCallback();}
   
   /** Takes outputs from simulink and pushes their commands to hardware */
-  void PostStep() {for(auto component : dlib::Component::AllCreatedComponents) component->PostStepCallback();}
+  void PostStep() {for(auto component : dlib::Component::allCreatedComponents) component->PostStepCallback();}
 
   // All Components
-  ChooserComponent m_ChooserComponent;
+  ChooserTest m_ChooserComponent;
 };

@@ -4,7 +4,7 @@
 #include "DertLib/include/Component.h"
 #include "DertLib/include/Chooser.h"
 
-class ChooserComponent : public dlib::Component
+class ChooserTest : public dlib::Component
 {
 public:
 	void PreStepCallback() override;
