@@ -1,7 +1,6 @@
 #include <hal/HAL.h>
 
 #include "gtest/gtest.h"
-#include "TalonFXTest.h"
 
 int main(int argc, char** argv) {
   HAL_Initialize(500, 0);
